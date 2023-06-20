@@ -66,4 +66,38 @@ UCI Machine Learning Repository: Taiwanese Bankruptcy Prediction Data Set. (n.d.
 
 ![image](https://github.com/ritzi12/bankruptcy_iht/assets/80144294/19a0c178-f3c5-4cf3-a9c9-719990155e13)
 
-###
+### Summary Plot for Bankrupt Class
+
+Summary for Single Class - A summary plot for single class gives us density plot.
+
+Below is Summary pplot for Bankrupt class.
+* We observe High values of feature Net Income to Total Assets drives the probability down of belonging to Bankrupt class.
+* Low Values of Total Debt/ Total net Worth drives down the probability of belonging to Bankrupt class.
+  
+These are in accordance to the norm that if debt is lower as compared to net worth of company then it has lower tendency to be bankrupt and vice -versa for Net Income to total Assets i.e. High values of net income /assets ratio also signifies lower tendency of company to go bankrupt.
+![image](https://github.com/ritzi12/bankruptcy_iht/assets/80144294/70776920-e4d4-4153-b240-1af6361cfd8e)
+
+
+## Conclusion
+
+* We successfully saw how to step by step break down a high dimensional dataset to a subset of important features and draw insights as to which features impact the bankruptcy position of company.
+*  The results demonstrate that Xgboost and AdaBoost RUS are the best performing models in terms of accuracy, while AdaBoost RUS and Xgboost have the highest F1-score for the positive class (bankrupt). 
+* After applying IHT under-sampling, the precision for the bankrupt class increases for Isolation Forest.
+* Balanced accuracy for all six models increases after applying IHT under-sampling, with the most significant increase observed in Xgboost, Isolation Forest, and Adaboost RUS.
+* Using instance hardness threshold (IHT) under-sampling in an imbalanced Taiwanese dataset has been shown to be a promising approach for addressing this challenge. By focusing on the hardest instances in the dataset, this technique has demonstrated the potential to improve the performance of machine learning models for bankruptcy prediction
+* The results suggest that IHT under-sampling can effectively reduce the negative impact of class imbalance on model performance, leading to more accurate and reliable predictions. 
+
+* Shap Interpretation allows us to understand how the features contribute to the modle predictions and gain better insight on feature understandings.
+
+## Future Scope 
+
+* There are several potential avenues for future work in bankruptcy prediction using instance hardness threshold (IHT) under-sampling. It would be beneficial to explore the performance of other machine learning algorithms, such as neural networks or decision trees, with IHT under-sampling for bankruptcy prediction.
+
+* Additionally, it would be interesting to investigate the use of ensemble techniques, such as stacking or boosting, which is based on concept of **"Wisdom of the Crowd"** to further improve the performance of the models.
+
+## References
+
+1. A Cluster-Based Boosting Algorithm for Bankruptcy Prediction in a Highly Imbalanced Dataset. Symmetry, 10(7), 250. https://doi.org/10.3390/sym10070250
+
+2. Cost Sensitive Evaluation of Instance Hardness in Machine Learning. Machine Learning and Knowledge Discovery in Databases, 86–102. https://doi.org/10.1007/978-3-030-46147-8_6
+
