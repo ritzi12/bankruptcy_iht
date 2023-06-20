@@ -14,3 +14,24 @@ The study proposes to achieve following objectives :
 3.	To compare and analyze the performance of supervised learning methods with and without instance hardness based under-sampling method.
 4.	To combine various feature selection techniques to reduce the dimensionality of dataset.
 5. To interpret model predictions using SHAP values- Force plots, summary plots , Density plots.
+
+## Methodology
+
+The below are the broad steps in this research study:
+1. Choose candidate supervised models to conduct testing and comparison of performance. Models were chose based on prediction performance on imbalanced dataset. Candidate supervised algorithms applied are SVM, Xgboost, Isolation Forest, Balanced Random Forest, AdaBoost Classifier with integrated under-sampling, Easy Ensemble. 
+2. Clean dataset and perform exploratory data analysis (EDA)
+3. Apply feature selection techniques such as F-score, Chi-square, Mutual Information Gain, Tree-based embedded methods – Random Forest Classifier and Extra Trees Classifier.
+4. Split the dataset into Train and Test set.
+5.	Apply the selected candidate supervised learning models.
+6.	Compare their performance on test set using classification metrics such as accuracy, precision, recall, F1-score and balanced accuracy.
+7.	Apply the Instance Hardness Threshold based under-sampling method on train dataset to reduce the imbalance in the dataset.
+8.	Again apply the selected candidate supervised learning models on this under-sampled dataset
+9.	Compare the performance of the models without and without IHT under-sampling. 
+10. SHAP Interpretation on any supported tree model out of 6 models used here
+
+![image](https://github.com/ritzi12/bankruptcy_iht/assets/80144294/9b7cfe1f-d9f9-4bbc-8c4a-45cddfbe7586)
+
+## Dataset 
+UCI Machine Learning Repository: Taiwanese Bankruptcy Prediction Data Set. (n.d.). UCI Machine Learning Repository: Taiwanese Bankruptcy Prediction Data Set. https://archive.ics.uci.edu/ml/datasets/Taiwanese+Bankruptcy+Prediction
+
+![image](https://github.com/ritzi12/bankruptcy_iht/assets/80144294/6b3452f1-0d8c-45cb-b910-a76072580e44)
